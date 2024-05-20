@@ -1,0 +1,15 @@
+<form>
+    <div>
+        <label for="IDInput" > ID:</label>
+        <input class="form-control " type="text" id="" name="IDInput" [(ngModel)]="dept.id"/>
+    </div>
+    <div>
+        <label for="nameInput" >Name:</label>
+        <input class="form-control " type="text" id="" name="nameInput" [(ngModel)]="dept.name"/>
+    </div>
+    <div>
+        <label for="capInput" >Capacity:</label>
+        <input class="form-control " type="text" id="" name="capInput" [(ngModel)]="dept.loc"/>
+    </div>
+    <input class="btn btn-success" value="Add" type="submit" (click)="Save()" />
+</form>

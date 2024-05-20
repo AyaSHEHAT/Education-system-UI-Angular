@@ -1,0 +1,33 @@
+<a routerLink="/students/add" class="btn btn-primary">Add Student</a>
+<div class="table-responsive text-center ">
+    <table class="table table-hover table-striped table-borderless table-primary align-middle">
+        <thead class="table-light">
+            <caption>
+                Students
+            </caption>
+            <tr class="text-capitalize">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            <tr class="table-secondary" *ngFor="let item of students">
+                <td scope="row">{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.age}}</td>
+                <td>{{item.adddress}}</td>
+                <td class="d-flex justify-content-evenly">
+                    <a class="btn btn-secondary" routerLink="/students/details/{{item.id}}">Details</a>
+                    <a class="btn btn-success " routerLink="/students/edit/{{item.id}}">Update</a>
+                    <a class="btn btn-danger " routerLink="/students/delete/{{item.id}}">Delete</a>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<router-outlet></router-outlet>

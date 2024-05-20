@@ -1,0 +1,31 @@
+<a routerLink="/departments/add" class="btn btn-primary">Add Dept</a>
+<div class="table-responsive text-center ">
+    <table class="table table-hover table-striped table-borderless table-primary align-middle">
+        <thead class="table-light">
+            <caption>
+                Departments
+            </caption>
+            <tr class="text-capitalize">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            <tr class="table-secondary" *ngFor="let item of depts">
+                <td scope="row">{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.loc}}</td>
+                <td class="d-flex justify-content-evenly">
+                    <a class="btn btn-secondary" routerLink="/departments/details/{{item.id}}">Details</a>
+                    <a class="btn btn-success " routerLink="/departments/edit/{{item.id}}">Update</a>
+                    <a class="btn btn-danger " routerLink="/departments/delete/{{item.id}}">Delete</a>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<router-outlet></router-outlet>
